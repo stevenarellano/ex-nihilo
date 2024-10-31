@@ -1,0 +1,40 @@
+{
+	"version": 3,
+	"cmakeMinimumRequired": {
+		"major": 3,
+		"minor": 19,
+		"patch": 0
+	},
+	"configurePresets": [
+		{
+			"name": "build-all",
+			"displayName": "Build All Projects",
+			"description": "Build all projects in this repository.",
+			"generator": "Unix Makefiles",
+			"binaryDir": "${sourceDir}/build",
+			"cacheVariables": {
+				"BUILD_DB": "ON"
+			}
+		},
+		{
+			"name": "build-db",
+			"displayName": "Build Database.",
+			"description": "Build database project and its dependencies.",
+			"generator": "Unix Makefiles",
+			"binaryDir": "${sourceDir}/build/db",
+			"cacheVariables": {
+				"BUILD_DB": "ON"
+			}
+		}
+	],
+	"buildPresets": [
+		{
+			"name": "all",
+			"configurePreset": "build-all"
+		},
+		{
+			"name": "db",
+			"configurePreset": "build-db"
+		}
+	]
+}

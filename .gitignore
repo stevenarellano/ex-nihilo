@@ -1,0 +1,21 @@
+/.DS_Store
+/Thumbs.db
+
+**/build/**/*
+**/CMakeFiles/
+**/CMakeCache.txt
+
+/.idea/
+.vscode/
+*.suo
+*.user
+*.sln
+*.vcxproj
+*.vcxproj.filters
+
+*.log
+*.tmp
+*~
+
+
+# hidden
