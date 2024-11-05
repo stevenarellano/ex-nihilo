@@ -15,8 +15,11 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 option(BUILD_DB "Build db" ON)
-
 if(BUILD_DB)
     add_subdirectory(db)
 endif()
 
+option(BUILD_CEREBRUM "Build cerebrum" ON)
+if(BUILD_CEREBRUM)
+  add_subdirectory(cerebrum) # comes from the subdir CMakeLists.txt
+endif()
