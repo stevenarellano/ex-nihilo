@@ -2,26 +2,21 @@
 
 build from scratch
 
-# Building & Running
+# Running tests
 
 Using the presents in the `CMakePresets.json` file:
 
 ```
-cmake --preset build-all
-cmake --build --preset all
+cmake --preset build-<preset_name>
+cmake --build --preset <preset_name>
 ```
 
-# commands
+Then navigate to the build directory and run the tests:
 
-cmake --preset build-all
-
-cd build/all
+```
+cd build/<preset-name>
 make
-
 ctest
+```
 
-ctest --output-on-failure
-
-ctest -N
-
-ctest -R <test_name>
+When building `all`, the build folder will just be `build/`.
